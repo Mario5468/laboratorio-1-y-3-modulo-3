@@ -1,0 +1,163 @@
+video 1 de 3  
+
+date 
+clear
+sudo vi /etc/default/grub
+:wq
+sudo grup2-mkconfig -o /boot/gurb2/grub.cfg
+sudo reboot
+date
+e
+rd.break
+mount -o remount,rw /sysroot
+chroot /sysroot
+passwd
+exit
+exit
+
+
+video 2 de 3
+
+date
+vi backup.sh
+#!/bin/bash
+
+dir_to_backup="/home/2024-2369"
+backup_dir="/home/2024-2369/backup"
+
+mkdir -p "$backup_dir"
+
+time= $(date +"%d-%m-y_%H-%M")
+
+backup_file="$backup_dir/backup_$time.tar.gz"
+
+tar -czf "$backup_file" -c "$dir_to_backup" .
+
+echo " backup creado en :$backup_file" 
+
+
+chomod  +x backup.sh
+./backup.sh
+ls
+ls -l
+
+clear
+cd backup/
+ls
+cat backup.tar.gz
+
+clear
+
+segunda parte 
+
+date 
+clear
+vi  ifconfig.sh
+
+#!/bin/bash
+
+read -p " que nombre desea colocar al archivo " FILENAME
+
+desktop _dir="HOME/Desktop"
+
+filepath="$desktop_dir/$FILENAME.txt"
+
+ifconfig >"$file_Path"
+
+echo "la salida de ifconfig se guardo en:$file_path"
+
+esc
+clear
+./ifconfig .sh
+brueba
+clear
+
+ifconfig
+clear
+
+cd
+
+cd Desktop
+ls
+cat.prueba.txt
+clear
+date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+video 3 de 3
+
+cd
+date
+ifconfig
+ping 192.168.100.139
+clear
+ping 192.168.100.139
+sudo yum openssh-server
+systemctl enable sshd 
+systemctl status 
+clear
+
+cd .ssh
+cat authorized_keys 
+clear
+ssh 2024-2369@192.168.100.139
+cd ls -ls 
+ls -l 
+clear
+clear
+ssh-keygen 
+ssh-keyhen -t rsa  -b 4096
+C:\Users\minec/.ssh/id_rsa.pub
+clear
+cd .ssh
+nano authorized_keys
+exit
+ssh 2024-2369@192.168.100.139
+ls -l
+clear
+date
+
+
+
+
+
